@@ -86,7 +86,7 @@
    */
   function createCollection(proto, objectOnly){
     function Collection(a){
-      if (!this || this.constructor !== Collection) return new Collection(a);
+      if (!this || !(this instanceof Collection)) return new Collection(a);
       this._keys = [];
       this._values = [];
       this._itp = []; // iteration pointers
